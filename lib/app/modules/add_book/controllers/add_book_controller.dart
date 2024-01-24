@@ -51,7 +51,7 @@ class AddBookController extends GetxController {
           bookController.getData();
           Get.back();
         }else {
-          Get.snackbar("Sorry", "Failed to Login", backgroundColor: Colors.orange);
+          Get.snackbar("Sorry", "Failed to Add Book", backgroundColor: Colors.orange);
         }
       }loading(false);
     }on DioException catch (e){
