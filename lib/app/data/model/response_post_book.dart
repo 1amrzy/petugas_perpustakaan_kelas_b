@@ -11,11 +11,11 @@ class ResponsePostBook {
   ResponsePostBook.fromJson(dynamic json) {
     status = json['status'];
     message = json['message'];
-    data = json['data'] != null ? Data.fromJson(json['data']) : null;
+    data = json['data'] != null ? DataPostBook.fromJson(json['data']) : null;
   }
   int? status;
   String? message;
-  Data? data;
+  DataPostBook? data;
 
   Map<String, dynamic> toJson() {
     final map = <String, dynamic>{};
@@ -38,8 +38,8 @@ class ResponsePostBook {
 /// created_at : "2024-01-12T08:39:03.000000Z"
 /// id : 3
 
-class Data {
-  Data({
+class DataPostBook {
+  DataPostBook({
       this.kategoriId, 
       this.judul, 
       this.penulis, 
@@ -49,7 +49,7 @@ class Data {
       this.createdAt, 
       this.id,});
 
-  Data.fromJson(dynamic json) {
+  DataPostBook.fromJson(dynamic json) {
     kategoriId = json['kategori_id'];
     judul = json['judul'];
     penulis = json['penulis'];
